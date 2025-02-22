@@ -1,1 +1,0 @@
-java -Xmx1024M -Xms1024M -jar forge-1.21.4-54.1.0-shim.jar
