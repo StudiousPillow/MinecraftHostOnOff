@@ -1,1 +1,14 @@
+
+# Minecraft stuff
 forge*installer*
+README.txt
+run.bat
+run.sh
+user_jvm_args.txt
+forge*shim.jar
+libraries/
+mods
+logs
+defaultconfigs
+config
+eula.txt
