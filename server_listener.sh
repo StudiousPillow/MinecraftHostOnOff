@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Port to listen on
-PORT=12345
+# PORT=12345
+source params.sh
 
 # Command to execute when the signal is received
 COMMAND="./server_stop.sh"

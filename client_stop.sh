@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Server address and port
-SERVER_ADDRESS="localhost"
-PORT=12345
+# SERVER_ADDRESS="localhost"
+# PORT=12345
+source params.sh
 
 # Signal to send
 SIGNAL="STOP_SERVER"
