@@ -28,6 +28,8 @@ Now it will automatically start the server when the instance is started.
 
 Use client_start.sh on your local computer. And when done use client_stop, then client_shutdown.
 
+To put in commands in the server, use client_command.
+
 ## Parameters
 
 Remove or add people to black and whitelists, add more memory in start_server.sh, 

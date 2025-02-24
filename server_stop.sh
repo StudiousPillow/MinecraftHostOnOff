@@ -6,3 +6,8 @@ source params.sh
 
 # Send the stop command to the server
 screen -S $SCREEN_NAME -X stuff "stop$(printf \\r)"
+
+## to kill session
+## screen -S -X $SCREEN_NAME quit or kill or exit
+## to see all sessions running
+## screen -ls
