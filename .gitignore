@@ -20,3 +20,6 @@ server.properties
 usercache.json
 whitelist.json
 world/
+# pixi environments
+.pixi
+*.egg-info
