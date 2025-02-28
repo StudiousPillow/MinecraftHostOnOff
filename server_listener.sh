@@ -11,9 +11,13 @@ COMMAND="./server_stop.sh"
 while true; do
     echo "Listening on port $PORT..."
     nc -l -p $PORT | while read line; do
-        if [[ "$line" == "STOP_SERVER" ]]; then
+        if [[ "$line" == "$STOP_MSG" ]]; then
             echo "Received stop signal. Executing command..."
             $COMMAND
-        fi
+            break 2  # Exit both the inner and outer loops to stop the script
+        elif [[ "$line" == "$INJECT_MSG" ]]; then
+            echo "Received inject signal. Injecting command into Minecraft server..."
+            screen -S $SCREEN_NAME -X stuff "$INJECT_COMMAND$(printf \\r)"
+        # screen -S $SCREEN_NAME -X stuff "stop$(printf \\r)"
     done
 done

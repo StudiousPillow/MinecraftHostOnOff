@@ -34,7 +34,7 @@ To put in commands in the server, use client_command.
 Remove or add people to black and whitelists, add more memory in start_server.sh, 
 
 # Framework
-![Draw.io](./img/framework.drawio.png "Framework")
+![Draw.io](./img/framework.v2.drawio.png "Framework")
 
 # Links
 [The minecraft forge server](https://files.minecraftforge.net/net/minecraftforge/forge/) (use the version you need for your mods)
