@@ -1,4 +1,5 @@
 params.sh
+client_ovh_credentials.yaml
 
 # Minecraft stuff
 forge*installer*
