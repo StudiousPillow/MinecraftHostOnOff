@@ -22,13 +22,13 @@ client = ovh.Client(
 
 def activate_and_start_instance(project_id, instance_id):
     # Resume the instance if it is suspended
-    client.post(f'/cloud/project/{project_id}/instance/{instance_id}/resume')
+    client.post(f'/cloud/project/{project_id}/instance/{instance_id}/unshelve')
     print(f"Resuming instance {instance_id}...")
-    time.sleep(10)  # Wait for the instance to resume
+    # Wait for the instance to unshelve
 
     # Start the instance
-    client.post(f'/cloud/project/{project_id}/instance/{instance_id}/start')
-    print(f"Starting instance {instance_id}...")
+    # client.post(f'/cloud/project/{project_id}/instance/{instance_id}/start')
+    # print(f"Starting instance {instance_id}...")
 
 if __name__ == "__main__":
     activate_and_start_instance(project_id, instance_id)
