@@ -8,11 +8,24 @@ Have a linux server hosted somewhere with:
 
 The client side start script will depend on the host API. It just needs to start the virtual cloud machine and the server will launch on startup.
 
+## For OVH
+- Create ssh key and add them to OVH
+- Optionally create user
+- Create instance (already fixed IP) b3-32 or b3-64
+- Create API token
+
 ## Server
 - Clone the git on the server
+- install java 
+```bash
+sudo apt install openjdk-21-jre
+```
 - [Download](https://files.minecraftforge.net/net/minecraftforge/forge) and launch the installer
-- Fill the params.sh
+```bash
+java -jar forge-1.21.4-54.1.0-installer.jar --installServer
+```
 - Change the "false" to "true" in the eula.txt
+- Fill the params.sh
 - Modify the minecraft_server.service to have the right filepaths then copy it to /etc/systemd/system/minecraft_server.service. Then run: 
 ```bash
 sudo systemctl daemon-reload
@@ -24,6 +37,7 @@ Now it will automatically start the server when the instance is started.
 ## Client
 - Clone the git on the client
 - Fill the params.sh
+- If the host is OVH, fill the client_ovh_credentials 
 
 # Usage
 
@@ -41,3 +55,10 @@ Remove or add people to black and whitelists, add more memory in start_server.sh
 [The minecraft forge server](https://files.minecraftforge.net/net/minecraftforge/forge/) (use the version you need for your mods)
 
 [A good place to find mods](https://www.curseforge.com/minecraft) (Careful look for which version it is available, and which dependencies it has)
+
+# Todo
+
+Rename
+Simplify installation: Use better installation of forge minecraft server (https://www.curseforge.com/minecraft/mc-mods/forge-server-starter/download/5253323?)
+Simplify the crontab part and only quit if there is also no user connected
+API for other providers
