@@ -20,16 +20,20 @@ client = ovh.Client(
     consumer_key=consumer_key,
 )
 
-def stop_and_suspend_instance(project_id, instance_id):
-    # Stop the instance
-    client.post(f'/cloud/project/{project_id}/instance/{instance_id}/stop')
-    print(f"Stopping instance {instance_id}...")
-    # Wait for the instance to stop
+def shelve_instance(project_id, instance_id):
 
     # Suspend the instance
     client.post(f'/cloud/project/{project_id}/instance/{instance_id}/shelve')
     print(f"Shelving instance {instance_id}...")
     # Wait for the instance to shelve
+    instance_dico = client.get(f'/cloud/project/{project_id}/instance/{instance_id}')
+    status = instance_dico['status']
+    print(status, end='\r')
+    while status == "SHELVING":
+        print(f'Instance status: {status}', end='\r')
+        instance_dico = client.get(f'/cloud/project/{project_id}/instance/{instance_id}')
+        status = instance_dico['status']
+    print(f'\n{status}')
 
 if __name__ == "__main__":
-    stop_and_suspend_instance(project_id, instance_id)
+    shelve_instance(project_id, instance_id)

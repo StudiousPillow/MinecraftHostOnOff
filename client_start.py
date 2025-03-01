@@ -20,15 +20,23 @@ client = ovh.Client(
     consumer_key=consumer_key,
 )
 
-def activate_and_start_instance(project_id, instance_id):
+def unshelve_instance(project_id, instance_id):
     # Resume the instance if it is suspended
     client.post(f'/cloud/project/{project_id}/instance/{instance_id}/unshelve')
     print(f"Resuming instance {instance_id}...")
     # Wait for the instance to unshelve
+    instance_dico = client.get(f'/cloud/project/{project_id}/instance/{instance_id}')
+    status = instance_dico['status']
+    print(status, end='\r')
+    while status == "UNSHELVING":
+        print(f'Instance status: {status}', end='\r')
+        instance_dico = client.get(f'/cloud/project/{project_id}/instance/{instance_id}')
+        status = instance_dico['status']
+    print(f'\n{status}')
 
     # Start the instance
     # client.post(f'/cloud/project/{project_id}/instance/{instance_id}/start')
     # print(f"Starting instance {instance_id}...")
 
 if __name__ == "__main__":
-    activate_and_start_instance(project_id, instance_id)
+    unshelve_instance(project_id, instance_id)
