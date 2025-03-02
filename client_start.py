@@ -3,7 +3,7 @@ import time
 import yaml
 
 # Load OVH credentials from YAML file
-with open('client_ovh_credentials.yaml') as config_file:
+with open('credentials_ovh.yaml') as config_file:
     config = yaml.safe_load(config_file)
 
 application_key = config['application_key']

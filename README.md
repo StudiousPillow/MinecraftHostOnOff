@@ -9,10 +9,14 @@ Have a linux server hosted somewhere with:
 The client side start script will depend on the host API. It just needs to start the virtual cloud machine and the server will launch on startup.
 
 ## For OVH
-- Create ssh key and add them to OVH
-- Optionally create user
-- Create instance (already fixed IP) b3-32 or b3-64
+- Create ssh key pair and add the public to OVH
+- Create instance (by default fixed IP) b3-32 or b3-64
 - Create API token
+
+## Client
+- Clone the git on the client
+- Fill the params.sh
+- If the host is OVH, fill the client_ovh_credentials 
 
 ## Server
 - Clone the git on the server
@@ -34,10 +38,6 @@ sudo systemctl enable minecraft_server.service
 Now it will automatically start the server when the instance is started.
 - Add the server_shutdown.sh to the crontab (every minutes, or 5 minutes)
 
-## Client
-- Clone the git on the client
-- Fill the params.sh
-- If the host is OVH, fill the client_ovh_credentials 
 
 # Usage
 
@@ -58,7 +58,5 @@ Remove or add people to black and whitelists, add more memory in start_server.sh
 
 # Todo
 
-Rename
-Simplify installation: Use better installation of forge minecraft server (https://www.curseforge.com/minecraft/mc-mods/forge-server-starter/download/5253323?)
-Simplify the crontab part and only quit if there is also no user connected
-API for other providers
+- API for other providers
+- rename credentials
