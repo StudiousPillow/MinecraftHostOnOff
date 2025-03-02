@@ -5,6 +5,6 @@ source params.sh
 
 ## start the server in a screen session to easily stop it
 screen -S $SCREEN_NAME -d -m java -Xmx1024M -Xms1024M \
- -jar $JAR_NAME nogui 
+ -jar server/$JAR_NAME nogui 
 
 screen -S server_listener -d -m bash server_listener.sh

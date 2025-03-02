@@ -3,6 +3,9 @@ credentials_ovh.yaml
 sshkey
 
 # Minecraft stuff
+server/
+server_backup/
+
 forge*installer*
 README.txt
 run.bat
@@ -22,6 +25,7 @@ server.properties
 usercache.json
 whitelist.json
 world/
+
 # pixi environments
 .pixi
 *.egg-info
