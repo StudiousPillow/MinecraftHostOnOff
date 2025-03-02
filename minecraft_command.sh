@@ -12,4 +12,5 @@ COMMAND="$1"
 
 # Send the command to the remote server
 echo "Sending command: $COMMAND"
-ssh $USER@$SERVER_ADDRESS -i $SSHKEY "echo -e '$COMMAND\n' | nc localhost $LISTEN_PORT"
+ssh $USER@$SERVER_ADDRESS -i $SSHKEY "echo -e '$COMMAND\n' | nc -q 1 localhost $LISTEN_PORT"
+# ssh $USER@$SERVER_ADDRESS -i $SSHKEY "printf '%s\n' '$COMMAND' | nc localhost $LISTEN_PORT"
