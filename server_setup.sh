@@ -10,5 +10,8 @@ java -jar $JAR_INSTALLER --installServer
 echo "eula=true #https://aka.ms/MinecraftEULA" > eula.txt
 
 # autostart the server on startup of the machine
-# create /etc/systemd/system/minecraft_server.service
+# /etc/systemd/system/minecraft_server.service
+cp minecraft_server.service /etc/systemd/system/
 # enable and reload
+sudo systemctl daemon-reload
+sudo systemctl enable minecraft_server.service

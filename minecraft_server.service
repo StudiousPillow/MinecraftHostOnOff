@@ -3,10 +3,10 @@ Description=Minecraft Server
 After=network.target
 
 [Service]
-ExecStart=/path/to/your/server_start.sh
-WorkingDirectory=/path/to/your/minecraft/server
-User=yourusername
-Group=yourusername
+ExecStart=server_start.sh
+WorkingDirectory=~
+User=ubuntu
+Group=ubuntu
 Restart=always
 
 [Install]
