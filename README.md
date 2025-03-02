@@ -19,11 +19,15 @@ Have a linux server hosted somewhere with:
 
 ## Server
 - Connect to the server with sftp and copy all files
-- Setup the server
+- Setup the machine
 ```bash
 bash server_setup.sh
 ```
-Instead of server_setup you can also restore_backup.
+- Install the minecraft server
+```bash
+bash server_install.sh
+```
+Instead of server_install you can also restore_backup to restore a server.
 
 # Usage
 
