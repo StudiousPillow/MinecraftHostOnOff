@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 ExecStart=server_start.sh
-WorkingDirectory=~
+WorkingDirectory=/home/ubuntu
 User=ubuntu
 Group=ubuntu
 Restart=always
