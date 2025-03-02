@@ -1,0 +1,14 @@
+world
+mods
+logs
+libraries
+config
+defaultconfig
+server.properties
+ops.json
+usercache.json
+whitelist.json
+banned-ips.json
+banned-players.json
+eula.txt
+README.txt
