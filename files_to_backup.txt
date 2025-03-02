@@ -3,7 +3,7 @@ mods
 logs
 libraries
 config
-defaultconfig
+defaultconfigs
 server.properties
 ops.json
 usercache.json
