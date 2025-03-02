@@ -18,7 +18,7 @@ Have a linux server hosted somewhere with:
 - [Download](https://files.minecraftforge.net/net/minecraftforge/forge) the installer and put it in server/
 
 ## Server
-- Connect to the server with ssh
+- Connect to the server with sftp and copy all files
 - Setup the server
 ```bash
 bash server_setup.sh
