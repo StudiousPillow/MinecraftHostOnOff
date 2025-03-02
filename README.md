@@ -65,5 +65,6 @@ exit
 
 # Potential improvements
 
+- Fix the automatic startup of the server
 - Script to copy only the right files and execute setup and install
 - API scripts for other providers
