@@ -12,4 +12,4 @@ COMMAND="$1"
 
 # Send the command to the remote server
 echo "Sending command: $COMMAND"
-ssh $USER@$SERVER_ADDRESS "echo $COMMAND | nc localhost $SERVER_PORT"
+ssh $USER@$SERVER_ADDRESS -i $SSHKEY "echo -e '$COMMAND\n' | nc localhost $SERVER_PORT"
