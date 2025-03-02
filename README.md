@@ -22,7 +22,7 @@ Have a linux server hosted somewhere with:
 - Connect to the server with sftp and copy all files
 - Setup the machine
 ```bash
-bash server_setup.sh
+sudo bash server_setup.sh
 ```
 - Install the minecraft server
 ```bash
