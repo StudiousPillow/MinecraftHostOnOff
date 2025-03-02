@@ -58,5 +58,7 @@ Remove or add people to black and whitelists, add more memory in start_server.sh
 
 # Todo
 
+- rename scripts
+- setup script
+- backup
 - API for other providers
-- rename credentials
