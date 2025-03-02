@@ -20,6 +20,10 @@ Have a linux server hosted somewhere with:
 
 ## Server
 - Connect to the server with sftp and copy all files
+```bash
+sftp ubuntu@ipofyourmachine
+put *
+```
 - Setup the machine
 ```bash
 sudo bash server_setup.sh
