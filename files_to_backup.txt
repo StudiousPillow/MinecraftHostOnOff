@@ -12,3 +12,6 @@ banned-ips.json
 banned-players.json
 eula.txt
 README.txt
+usernamecache.json
+run.bat
+run.sh
