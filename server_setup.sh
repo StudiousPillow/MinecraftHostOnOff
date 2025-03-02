@@ -1,5 +1,8 @@
 source params.sh
 
+sudo ufw allow $SERVER_PORT
+sudo ufw allow $LISTEN_PORT
+
 # install java
 sudo apt install -y openjdk-21-jre 
 
