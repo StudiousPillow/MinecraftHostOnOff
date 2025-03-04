@@ -24,7 +24,7 @@ Have a linux server hosted somewhere with:
 sftp ubuntu@ipofyourmachine
 put *
 ```
-- Setup the machine
+- Setup the machine (opens the right ports)
 ```bash
 sudo bash server_setup.sh
 ```
@@ -65,6 +65,4 @@ exit
 
 # Potential improvements
 
-- Fix the automatic startup of the server
-- Script to copy only the right files and execute setup and install
 - API scripts for other providers
