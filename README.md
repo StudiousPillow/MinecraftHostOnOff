@@ -16,7 +16,6 @@ Have a linux server hosted somewhere with:
 - Fill the params.sh
 - If the host is OVH, fill the credentials_ovh.yaml 
 - [Download](https://files.minecraftforge.net/net/minecraftforge/forge) the installer and put it in server/
-- Change the path in minecraft_server.service to fit the user and workding directory
 
 ## Server
 - Connect to the server with sftp and copy all files
